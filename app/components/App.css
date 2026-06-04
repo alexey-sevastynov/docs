@@ -1,75 +1,62 @@
 .gorizontal-a4 {
-  margin: 0 auto;
-  margin-bottom: 10mm;
-  padding: 0px 30.75mm;
-  width: 148.5mm;
-  height: 210mm;
-  background-color: rgb(252, 245, 219);
-  border-radius: 0 0 5mm 5mm;
+    margin: 0 auto;
+    margin-bottom: 10mm;
+    padding: 0px 30.75mm;
+    width: 148.5mm;
+    height: 210mm;
+    background-color: rgb(252, 245, 219);
+    border-radius: 0 0 5mm 5mm;
 }
 
 .container-gorizontal {
-  width: 100%;
-  height: 100%;
-  padding: 1em;
-  box-sizing: border-box;
-  background-color: rgb(252, 245, 219);
-  border-radius: 0mm;
-
-}
-
-.vertical-a4 {
-  margin: 0 auto;
-  margin-bottom: 10mm;
-  border-radius: 0 0 5mm 5mm;
-  width: 210mm;
-  height: 297mm;
-  background-color: rgb(255, 255, 255);
-}
-
-.container-vertical {
-  padding: 1em;
-  box-sizing: border-box;
-
-}
-
-
-
-@media print {
-  .gorizontal-a4 {
-    margin: 0 auto;
-    margin-bottom: 0mm;
-    padding: 0px;
-    width: 297mm;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-
-  }
-
-  .container-gorizontal {
-    width: 50%;
+    width: 100%;
     height: 100%;
     padding: 1em;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-
-  }
+    background-color: rgb(252, 245, 219);
+    border-radius: 0mm;
 }
 
+.vertical-a4 {
+    margin: 0 auto;
+    margin-bottom: 10mm;
+    border-radius: 0 0 5mm 5mm;
+    width: 210mm;
+    height: 297mm;
+    background-color: rgb(255, 255, 255);
+}
+
+.container-vertical {
+    padding: 1em;
+    box-sizing: border-box;
+}
 
 @media print {
+    .gorizontal-a4 {
+        margin: 0 auto;
+        margin-bottom: 0mm;
+        padding: 0px;
+        width: 297mm;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+    }
 
+    .container-gorizontal {
+        width: 50%;
+        height: 100%;
+        padding: 1em;
+        box-sizing: border-box;
+        background-color: rgb(255, 255, 255);
+    }
+}
 
+@media print {
+    .vertical-a4 {
+        margin-bottom: 0mm;
+        border-radius: 0;
+    }
 
-  .vertical-a4 {
-    margin-bottom: 0mm;
-    border-radius: 0;
-
-
-  }
-
-
-  /* .vertical-a4 {
+    /* .vertical-a4 {
     margin: 0 auto;
     width: 297mm;
     height: 100%;
