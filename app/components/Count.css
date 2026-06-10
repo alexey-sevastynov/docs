@@ -22,11 +22,20 @@
 
     box-sizing: border-box;
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     font-size: 12px;
     border: 1px solid black;
-
-
 }
 
 .img__edit {
@@ -36,7 +45,6 @@
 
     transform: translateY(-50%);
     cursor: pointer;
-
 }
 
 .img__del {
@@ -47,10 +55,7 @@
 
     transform: translateY(-50%);
     cursor: pointer;
-
 }
-
-
 
 .img__close {
     position: absolute;
@@ -70,18 +75,13 @@
 
     transform: translateY(-50%);
     cursor: pointer;
-
 }
-
-
-
 
 h2 {
     text-align: center;
     margin: 0;
     font-size: 14px;
     font-weight: 400;
-
 }
 
 .margin5 {
@@ -90,8 +90,6 @@ h2 {
 
 .bold {
     font-weight: 600;
-
-
 }
 
 .bold-italic {
@@ -129,39 +127,53 @@ h2 {
     background-color: rgb(252, 245, 219);
     width: 100mm;
 
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     font-size: 12px;
 
     border: 1px solid black;
-
 }
 
-.select-tac {}
-
-
+.select-tac {
+}
 
 p {
     /* font-weight: 500; */
 }
 
-
-
 /* TABLE */
 
 table {
     width: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     border-collapse: collapse;
-
 }
 
 th {
     font-size: 12px;
     font-weight: 400;
     border-bottom: 1px solid black;
-
-
 }
 
 #ver {
@@ -171,7 +183,6 @@ th {
 thead tr {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-
 }
 
 .table__col-1 {
@@ -201,7 +212,18 @@ thead tr {
 .table__input-text {
     background-color: rgb(252, 245, 219);
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     box-sizing: border-box;
     font-size: 12px;
     font-weight: 400;
@@ -215,12 +237,22 @@ thead tr {
 
 .table__input-number {
     background-color: rgb(252, 245, 219);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     box-sizing: border-box;
     font-size: 12px;
     font-weight: 400;
     width: 100%;
-
 
     color: black;
 
@@ -237,14 +269,25 @@ thead tr {
     padding: 0px 5px;
     margin: 0;
     border: unset;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     font-size: 12px;
 
     box-sizing: border-box;
 }
 
-.tfoot__col-1 {}
-
+.tfoot__col-1 {
+}
 
 .tfoot__col-1 {
     height: 5mm;
@@ -259,25 +302,20 @@ thead tr {
 }
 
 .tfoot__col-3 {
-
     width: 17%;
 }
 
-
 .relative {
     position: relative;
-
 }
 
 .absolute {
-
     position: absolute;
     left: -7mm;
 }
 
 @media print {
     .select-tac {
-
         -moz-appearance: none;
         -webkit-appearance: none;
         border: none;
@@ -294,15 +332,11 @@ thead tr {
 
     .img__edit {
         display: none;
-
     }
 
     .img__del {
         display: none;
-
     }
-
-
 
     .img__close {
         display: none;
@@ -310,7 +344,6 @@ thead tr {
 
     .img__accept {
         display: none;
-
     }
 
     .input-tac {
@@ -324,12 +357,21 @@ thead tr {
         background-color: white;
         width: 50mm;
 
-
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            "Open Sans",
+            "Helvetica Neue",
+            sans-serif;
         font-size: 12px;
 
         border: none;
-
     }
 
     .title select {
