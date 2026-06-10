@@ -1,0 +1,64 @@
+export const iconSizes = {
+    tiny: 8,
+    small: 12,
+    medium: 18,
+    large: 24,
+    xLarge: 32,
+} as const;
+
+export type IconSize = (typeof iconSizes)[keyof typeof iconSizes];
+
+export const iconStrokeWidths = {
+    thin: 1,
+    normal: 1.5,
+    thick: 2,
+} as const;
+
+export type IconStrokeWidth = (typeof iconStrokeWidths)[keyof typeof iconStrokeWidths];
+
+export const iconNames = {
+    eye: "eye",
+    eyeOff: "eyeOff",
+    logOut: "logOut",
+    sun: "sun",
+    moon: "moon",
+    monitor: "monitor",
+    chevronDown: "chevronDown",
+    chevronsUpDown: "chevronsUpDown",
+    chevronUp: "chevronUp",
+    gripVertical: "gripVertical",
+    chevronsLeft: "chevronsLeft",
+    chevronLeft: "chevronLeft",
+    chevronsRight: "chevronsRight",
+    chevronRight: "chevronRight",
+    download: "download",
+    close: "close",
+    filter: "filter",
+    settings: "settings",
+    coffee: "coffee",
+    users: "users",
+    dashboard: "dashboard",
+    receipt: "receipt",
+    circleGauge: "circleGauge",
+    edit: "edit",
+    trash: "trash",
+    check: "check",
+    wallet: "wallet",
+    calendarDays: "calendarDays",
+    dollarSign: "dollarSign",
+    banknote: "banknote",
+    creditCard: "creditCard",
+    shoppingCart: "shoppingCart",
+    trash2: "trash2",
+    percent: "percent",
+    trendingDown: "trendingDown",
+    receiptText: "receiptText",
+    calendar: "calendar",
+    piggyBank: "piggyBank",
+    pieChart: "pieChart",
+    activity: "activity",
+    clipboardCheck: "clipboardCheck",
+    printer: "printer",
+} as const;
+
+export type IconName = (typeof iconNames)[keyof typeof iconNames];

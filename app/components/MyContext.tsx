@@ -1,4 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from "react";
+import { DocumentType } from "@/shared/constants/document-types";
 
 export interface CustomerName {
     id: number;
@@ -6,27 +7,27 @@ export interface CustomerName {
 }
 
 export interface MyContextType {
-    count: string | number;
-    setCount: Dispatch<SetStateAction<string | number>>;
+    invoiceNumber: string | number;
+    setInvoiceNumber: Dispatch<SetStateAction<string | number>>;
     months: string[];
-    names: CustomerName[];
-    month: string;
-    name: string;
-    price1: string | number;
-    price2: string | number;
-    day: string | number;
-    year: string | number;
-    setName: Dispatch<SetStateAction<string>>;
-    setNames: Dispatch<SetStateAction<CustomerName[]>>;
-    setMonth: Dispatch<SetStateAction<string>>;
-    setYear: Dispatch<SetStateAction<string | number>>;
-    setDay: Dispatch<SetStateAction<string | number>>;
-    setPrice1: Dispatch<SetStateAction<string | number>>;
-    setPrice2: Dispatch<SetStateAction<string | number>>;
-    nav: string;
-    setNav: Dispatch<SetStateAction<string>>;
-    tab: boolean;
-    setTab: Dispatch<SetStateAction<boolean>>;
+    customerNames: CustomerName[];
+    setCustomerNames: Dispatch<SetStateAction<CustomerName[]>>;
+    customerName: string;
+    setCustomerName: Dispatch<SetStateAction<string>>;
+    invoiceTotalAmountMajor: string | number;
+    setInvoiceTotalAmountMajor: Dispatch<SetStateAction<string | number>>;
+    invoiceTotalAmountMinor: string | number;
+    setInvoiceTotalAmountMinor: Dispatch<SetStateAction<string | number>>;
+    documentDateDay: string | number;
+    setDocumentDateDay: Dispatch<SetStateAction<string | number>>;
+    documentDateMonth: string;
+    setDocumentDateMonth: Dispatch<SetStateAction<string>>;
+    documentDateYear: string | number;
+    setDocumentDateYear: Dispatch<SetStateAction<string | number>>;
+    transportRoute: string;
+    setTransportRoute: Dispatch<SetStateAction<string>>;
+    documentType: DocumentType;
+    setDocumentType: Dispatch<SetStateAction<DocumentType>>;
     activeEdit: boolean;
     setActivEdit: Dispatch<SetStateAction<boolean>>;
     activeInputEdit: boolean;

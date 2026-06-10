@@ -55,22 +55,4 @@
         margin-bottom: 0mm;
         border-radius: 0;
     }
-
-    /* .vertical-a4 {
-    margin: 0 auto;
-    width: 297mm;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 0mm;
-    border-radius: 0;
-  }
-
-  .container-vertical {
-    width: 50%;
-    height: 100%;
-    padding: 1em;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-
-  } */
 }

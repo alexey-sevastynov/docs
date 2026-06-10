@@ -41,40 +41,21 @@
 .img__edit {
     position: absolute;
     right: 0;
-    top: 50%;
-
-    transform: translateY(-50%);
-    cursor: pointer;
 }
 
 .img__del {
     position: absolute;
-    right: 7mm;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-    cursor: pointer;
+    right: -15mm;
 }
 
 .img__close {
     position: absolute;
     right: 0;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-    cursor: pointer;
 }
 
 .img__accept {
     position: absolute;
-    right: 7mm;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-    cursor: pointer;
+    right: -15mm;
 }
 
 h2 {
@@ -142,13 +123,6 @@ h2 {
     font-size: 12px;
 
     border: 1px solid black;
-}
-
-.select-tac {
-}
-
-p {
-    /* font-weight: 500; */
 }
 
 /* TABLE */
@@ -287,9 +261,6 @@ thead tr {
 }
 
 .tfoot__col-1 {
-}
-
-.tfoot__col-1 {
     height: 5mm;
     width: 73%;
     text-align: left;
@@ -311,7 +282,7 @@ thead tr {
 
 .absolute {
     position: absolute;
-    left: -7mm;
+    left: -15mm;
 }
 
 @media print {
@@ -328,22 +299,6 @@ thead tr {
 
     .input-count {
         margin-top: 0mm;
-    }
-
-    .img__edit {
-        display: none;
-    }
-
-    .img__del {
-        display: none;
-    }
-
-    .img__close {
-        display: none;
-    }
-
-    .img__accept {
-        display: none;
     }
 
     .input-tac {

@@ -1,79 +1,65 @@
 "use client";
 
-import React, { useState } from "react";
-import "./App.css";
-import Act from "./Act";
-import Count from "./Count";
-import Header from "./Header";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { MyContext, CustomerName } from "./MyContext";
+import { useState } from "react";
+import "@/app/components/App.css";
+import Act from "@/app/components/act/Act";
+import Invoice from "@/app/components/invoice/Invoice";
+import Header from "@/app/components/header/Header";
+import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { MyContext, CustomerName } from "@/app/components/MyContext";
+import { documentTypes, DocumentType } from "@/shared/constants/document-types";
+import { ukrainianMonthNames } from "@/shared/constants/ukrainian-month-names";
+import {
+    getCurrentDayOfMonth,
+    getCurrentYear,
+    getUkrainianMonthName,
+} from "@/shared/utils/date/getUkrainianMonthName";
 
-const months = [
-    "Січня",
-    "Лютого",
-    "Березня",
-    "Квітня",
-    "Травня",
-    "Червня",
-    "Липня",
-    "Серпня",
-    "Вересня",
-    "Жовтня",
-    "Листопада",
-    "Грудня",
-];
-
-const defaultNames: CustomerName[] = [
+const defaultCustomerNames: CustomerName[] = [
     { id: 1, name: "?" },
     { id: 2, name: 'ПП "НПФ СВК"' },
     { id: 3, name: 'ТОВ ВКФ "Інватех"' },
 ];
 
 export function ClientApp() {
-    const currentDate = new Date();
-
-    const [tab, setTab] = useState(true);
+    const [documentType, setDocumentType] = useState<DocumentType>(documentTypes.invoice);
     const [order, setOrder] = useState<CustomerName[]>([]);
-
-    const [count, setCount] = useState<string | number>(4444);
-    const [name, setName] = useState("?");
-
-    const [price1, setPrice1] = useState<string | number>(0);
-    const [price2, setPrice2] = useState<string | number>("00");
-    const [day, setDay] = useState<string | number>(currentDate.getDate());
-    const [month, setMonth] = useState(months[currentDate.getMonth()]);
-    const [year, setYear] = useState<string | number>(currentDate.getFullYear());
-    const [nav, setNav] = useState("м.Дніпро");
-
+    const [invoiceNumber, setInvoiceNumber] = useState<string | number>(4444);
+    const [customerName, setCustomerName] = useState("?");
+    const [invoiceTotalAmountMajor, setInvoiceTotalAmountMajor] = useState<string | number>(0);
+    const [invoiceTotalAmountMinor, setInvoiceTotalAmountMinor] = useState<string | number>("00");
+    const [documentDateDay, setDocumentDateDay] = useState<string | number>(getCurrentDayOfMonth());
+    const [documentDateMonth, setDocumentDateMonth] = useState(getUkrainianMonthName());
+    const [documentDateYear, setDocumentDateYear] = useState<string | number>(getCurrentYear());
+    const [transportRoute, setTransportRoute] = useState("м.Дніпро");
     const [activeEdit, setActivEdit] = useState(true);
     const [activeInputEdit, setInputActivEdit] = useState(true);
-
-    const [names, setNames] = useLocalStorage<CustomerName[]>(defaultNames, "order");
+    const [customerNames, setCustomerNames] = useLocalStorage<CustomerName[]>(defaultCustomerNames, "order");
 
     return (
         <MyContext.Provider
             value={{
-                count,
-                setCount,
-                months,
-                names,
-                month,
-                name,
-                price1,
-                price2,
-                day,
-                year,
-                setName,
-                setNames,
-                setMonth,
-                setYear,
-                setDay,
-                setPrice1,
-                setPrice2,
-                nav,
-                setNav,
-                tab,
-                setTab,
+                invoiceNumber,
+                setInvoiceNumber,
+                months: ukrainianMonthNames,
+                customerNames,
+                documentDateMonth,
+                customerName,
+                invoiceTotalAmountMajor,
+                invoiceTotalAmountMinor,
+                documentDateDay,
+                documentDateYear,
+                setCustomerName,
+                setCustomerNames,
+                setDocumentDateMonth,
+                setDocumentDateYear,
+                setDocumentDateDay,
+                setInvoiceTotalAmountMajor,
+                setInvoiceTotalAmountMinor,
+                transportRoute: transportRoute,
+                setTransportRoute: setTransportRoute,
+                documentType,
+                setDocumentType,
                 activeEdit,
                 setActivEdit,
                 activeInputEdit,
@@ -83,22 +69,7 @@ export function ClientApp() {
             }}
         >
             <Header />
-            {tab ? (
-                <>
-                    <div className="bckgr-white"></div>
-                    <div className="gorizontal-a4">
-                        <div className="container-gorizontal">
-                            <Count />
-                        </div>
-                    </div>
-                </>
-            ) : (
-                <div className="vertical-a4">
-                    <div className="container-vertical">
-                        <Act />
-                    </div>
-                </div>
-            )}
+            {documentType === documentTypes.invoice ? <Invoice /> : <Act />}
         </MyContext.Provider>
     );
 }
